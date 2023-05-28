@@ -1,0 +1,215 @@
+@import "_variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap");
+
+body {
+  font-family: "Playfair Display", serif;
+  margin: 0;
+
+  .left {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1.9fr 1fr;
+    width: 86%;
+
+    .header {
+      font-size: 75px;
+      margin: 15% 10% 5% 5%;
+
+      span {
+        border-bottom: 1px dashed $yellow;
+      }
+    }
+
+    .main__img {
+      background-image: url("../../img/1.jpeg");
+      background-position: center center;
+      background-size: cover;
+      width: 100%;
+    }
+  }
+
+  .right {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33333%);
+    position: fixed;
+    width: 14%;
+    height: 100%;
+    top: 0;
+    right: 0;
+
+    .food,
+    .retail,
+    .community {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      writing-mode: vertical-rl;
+      font-size: 22px;
+    }
+
+    .food {
+      background-color: $blue;
+    }
+
+    .retail {
+      background-color: $red;
+    }
+
+    .community {
+      background-color: $yellow;
+    }
+  }
+
+  .main {
+    .main__header {
+      font-size: 110px;
+      width: 60%;
+      margin: 10% 0% 5% 5%;
+    }
+
+    .main__contents {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      justify-content: center;
+      margin: 7.5% 2.5% 0% 2.5%;
+
+      .main__content {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        height: 100%;
+        margin: 0% 7.5%;
+
+        .main__content-first,
+        .main__content-second,
+        .main__content-third {
+          background-position: center center;
+          background-size: cover;
+          width: 100%;
+          height: 400px;
+        }
+
+        .main__content-first {
+          background-image: url("../../img/market_1.jpeg");
+        }
+
+        .main__content-second {
+          background-image: url("../../img/market_2.jpeg");
+        }
+
+        .main__content-third {
+          background-image: url("../../img/market_3.jpeg");
+        }
+
+        .main__content-text {
+          margin-top: 5%;
+        }
+      }
+    }
+
+    .event {
+      margin: 0px 50px;
+
+      .event__header {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 7.5%;
+
+        span {
+          width: 50%;
+          font-size: 96px;
+          text-align: center;
+        }
+      }
+
+      .event__contents {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 50px 0px;
+        border-top: 1px dotted black;
+        border-bottom: 1px dotted black;
+
+        .event__content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      .box {
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+
+        span {
+          border: 1px solid black;
+          padding: 15px 60px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    margin: 0px 50px;
+
+    .footer__info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      border-top: 1px dotted black;
+      border-bottom: 1px dotted black;
+      padding: 50px 0px;
+
+      .footer__email,
+      .footer__facebook,
+      .footer__instagram {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        span {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .newsletter {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      padding: 50px;
+      border: 1px dotted black;
+      margin-top: 50px;
+
+      span {
+        font-size: 25px;
+        width: 55.5%;
+      }
+
+      input {
+        font-size: 20px;
+        padding-left: 30px;
+      }
+    }
+
+    .footer__bottom {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      font-size: 14px;
+      margin-top: 25px;
+
+      a {
+        display: flex;
+        justify-content: center;
+
+        span {
+          border-bottom: 1px solid black;
+        }
+      }
+
+      span {
+        &:last-child {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
